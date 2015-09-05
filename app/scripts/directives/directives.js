@@ -207,6 +207,7 @@ angular.module('somafmPlayerApp')
                     scope.maxVolume = function () {
                         if (scope.audio.muted) {
                             scope.audio.muted = false;
+                            scope.muted = false;
                         }
                         scope.audio.volume = 1;
                         scope.volume = scope.audio.volume;
