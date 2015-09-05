@@ -213,6 +213,10 @@ angular.module('somafmPlayerApp')
                     };
 
                     scope.updateVolume = function (val) {
+                        if (val > 0 && scope.audio.muted) {
+                            scope.audio.muted = false;
+                            scope.muted = false;
+                        }
                         scope.audio.volume = val;
                     };
 
